@@ -9,6 +9,7 @@ TagManager:
   - Axe
   - Baseball Bat
   - Weapon
+  - Coin
   layers:
   - Default
   - TransparentFX

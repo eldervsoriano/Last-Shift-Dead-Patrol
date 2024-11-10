@@ -19,6 +19,104 @@
 //    public void UpgradeMovementSpeed() { if (coins >= 10) { playerMovement.UpgradeMovementSpeed(0.5f); coins -= 10; } }
 //}
 
+//using UnityEngine;
+//using TMPro;  // Import TextMeshPro namespace
+
+//public class UpgradeManager : MonoBehaviour
+//{
+//    public PlayerHealth playerHealth;
+//    public Bullet bulletPrefab;
+//    public TextMeshProUGUI coinsText;  // Reference to TextMeshProUGUI for displaying coins
+
+//    private int coins = 0;
+
+//    void Update()
+//    {
+//        // Update the UI every frame
+//        coinsText.text = "Coins: " + coins.ToString();
+//    }
+
+//    // Collect coins
+//    public void CollectCoins(int amount)
+//    {
+//        coins += amount;
+//        Debug.Log("Coins Collected: " + amount);
+//    }
+
+//    // Methods to upgrade stats
+//    public void UpgradeMaxHealth()
+//    {
+//        if (coins >= 10)
+//        {
+//            playerHealth.UpgradeMaxHealth(10);
+//            coins -= 10;
+//            Debug.Log("Max Health Upgraded!");
+//        }
+//        else
+//        {
+//            Debug.Log("Not enough coins for Max Health Upgrade.");
+//        }
+//    }
+
+//    public void UpgradeRegenRate()
+//    {
+//        if (coins >= 10)
+//        {
+//            playerHealth.UpgradeRegenRate(0.5f);
+//            coins -= 10;
+//            Debug.Log("Health Regeneration Rate Upgraded!");
+//        }
+//        else
+//        {
+//            Debug.Log("Not enough coins for Regen Rate Upgrade.");
+//        }
+//    }
+
+//    public void UpgradeMedKitHealAmount()
+//    {
+//        if (coins >= 5)
+//        {
+//            playerHealth.UpgradeMedKitHealAmount(5);
+//            coins -= 5;
+//            Debug.Log("MedKit Heal Amount Upgraded!");
+//        }
+//        else
+//        {
+//            Debug.Log("Not enough coins for MedKit Upgrade.");
+//        }
+//    }
+
+//    public void UpgradeDamage()
+//    {
+//        if (coins >= 10)
+//        {
+//            bulletPrefab.UpgradeDamage(2);
+//            coins -= 10;
+//            Debug.Log("Bullet Damage Upgraded!");
+//        }
+//        else
+//        {
+//            Debug.Log("Not enough coins for Damage Upgrade.");
+//        }
+//    }
+
+//    public void UpgradeBulletDuplication()
+//    {
+//        if (coins >= 15)
+//        {
+//            bulletPrefab.UpgradeBulletDuplication(1);
+//            coins -= 15;
+//            Debug.Log("Bullet Duplication Upgraded!");
+//        }
+//        else
+//        {
+//            Debug.Log("Not enough coins for Bullet Duplication Upgrade.");
+//        }
+//    }
+
+//    // Removed UpgradeMovementSpeed method since it's not being used anymore
+//}
+
 using UnityEngine;
 using TMPro;  // Import TextMeshPro namespace
 
@@ -30,10 +128,9 @@ public class UpgradeManager : MonoBehaviour
 
     private int coins = 0;
 
-    void Update()
+    void Start()
     {
-        // Update the UI every frame
-        coinsText.text = "Coins: " + coins.ToString();
+        UpdateCoinsDisplay();  // Ensure initial display is set
     }
 
     // Collect coins
@@ -41,6 +138,20 @@ public class UpgradeManager : MonoBehaviour
     {
         coins += amount;
         Debug.Log("Coins Collected: " + amount);
+        UpdateCoinsDisplay();  // Update display immediately after collecting coins
+    }
+
+    // Method to update coin display
+    private void UpdateCoinsDisplay()
+    {
+        if (coinsText != null)
+        {
+            coinsText.text = coins.ToString();  // Display only the number of coins
+        }
+        else
+        {
+            Debug.LogWarning("Coins Text UI reference is missing!");
+        }
     }
 
     // Methods to upgrade stats
@@ -50,6 +161,7 @@ public class UpgradeManager : MonoBehaviour
         {
             playerHealth.UpgradeMaxHealth(10);
             coins -= 10;
+            UpdateCoinsDisplay();
             Debug.Log("Max Health Upgraded!");
         }
         else
@@ -64,6 +176,7 @@ public class UpgradeManager : MonoBehaviour
         {
             playerHealth.UpgradeRegenRate(0.5f);
             coins -= 10;
+            UpdateCoinsDisplay();
             Debug.Log("Health Regeneration Rate Upgraded!");
         }
         else
@@ -78,6 +191,7 @@ public class UpgradeManager : MonoBehaviour
         {
             playerHealth.UpgradeMedKitHealAmount(5);
             coins -= 5;
+            UpdateCoinsDisplay();
             Debug.Log("MedKit Heal Amount Upgraded!");
         }
         else
@@ -92,6 +206,7 @@ public class UpgradeManager : MonoBehaviour
         {
             bulletPrefab.UpgradeDamage(2);
             coins -= 10;
+            UpdateCoinsDisplay();
             Debug.Log("Bullet Damage Upgraded!");
         }
         else
@@ -106,6 +221,7 @@ public class UpgradeManager : MonoBehaviour
         {
             bulletPrefab.UpgradeBulletDuplication(1);
             coins -= 15;
+            UpdateCoinsDisplay();
             Debug.Log("Bullet Duplication Upgraded!");
         }
         else
@@ -113,6 +229,5 @@ public class UpgradeManager : MonoBehaviour
             Debug.Log("Not enough coins for Bullet Duplication Upgrade.");
         }
     }
-
-    // Removed UpgradeMovementSpeed method since it's not being used anymore
 }
+

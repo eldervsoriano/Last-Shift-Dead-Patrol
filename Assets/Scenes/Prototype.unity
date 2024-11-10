@@ -157,7 +157,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 774, y: 428}
+  m_AnchoredPosition: {x: 668, y: 428}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &34494595
@@ -3578,7 +3578,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1496473433}
-  - component: {fileID: 1496473432}
   - component: {fileID: 1496473434}
   m_Layer: 0
   m_Name: Upgrade Manager
@@ -3587,18 +3586,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1496473432
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1496473431}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a43bef9f61dd8c047ba9c190736c5564, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1496473433
 Transform:
   m_ObjectHideFlags: 0
@@ -4570,6 +4557,8 @@ MonoBehaviour:
   currentHealth: 0
   healthBarFill: {fileID: 1513785895}
   healthText: {fileID: 1783450587}
+  coinPrefab: {fileID: 5009905749650396165, guid: 92c273427b0b5484492931ab3b41857a, type: 3}
+  coinDropAmount: 1
 --- !u!114 &1952692042
 MonoBehaviour:
   m_ObjectHideFlags: 0
