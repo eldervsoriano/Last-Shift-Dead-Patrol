@@ -6,10 +6,8 @@ TagManager:
   tags:
   - Zombie
   - Gun
-  - Axe
-  - Baseball Bat
-  - Weapon
   - Coin
+  - Furniture
   layers:
   - Default
   - TransparentFX
