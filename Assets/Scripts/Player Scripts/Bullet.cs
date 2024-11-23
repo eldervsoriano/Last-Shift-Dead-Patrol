@@ -148,6 +148,15 @@ public class Bullet : MonoBehaviour
     {
         bulletDuplicateCount += count; // Increase the number of duplicate bullets
     }
+
+    public void ResetStats()
+    {
+        damage = 10;
+        bulletDuplicateCount = 0;
+
+        Debug.Log("Bullet stats reset to defaults.");
+    }
+
 }
 
 

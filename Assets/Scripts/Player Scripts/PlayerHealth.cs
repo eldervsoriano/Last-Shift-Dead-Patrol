@@ -260,6 +260,17 @@ public class PlayerHealth : MonoBehaviour
         Destroy(gameObject); // Destroy the player
     }
 
-    
+    public void ResetStats()
+    {
+        maxHealth = 100;
+        regenRate = 1f;
+        medKitHealAmount = 20;
+
+        currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
+        healthBar.SetHealth(currentHealth, maxHealth);
+
+        Debug.Log("Player stats reset to defaults.");
+    }
 
 }
