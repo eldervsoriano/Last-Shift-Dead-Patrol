@@ -358,7 +358,7 @@ GameObject:
   - component: {fileID: 54358299}
   - component: {fileID: 54358301}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: SCORE Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1651,7 +1651,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: $70
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 44e81039798701348864ccada76c9456, type: 2}
   m_sharedMaterial: {fileID: -761011095782403961, guid: 44e81039798701348864ccada76c9456, type: 2}
@@ -2561,7 +2561,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 450003481}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &450003481
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2617,7 +2629,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &460614939
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3165,7 +3177,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 494954362}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1496473434}
+        m_TargetAssemblyTypeName: UpgradeManager, Assembly-CSharp
+        m_MethodName: UpgradeBulletDuplication
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &494954362
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5030,7 +5054,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 797469437}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1496473434}
+        m_TargetAssemblyTypeName: UpgradeManager, Assembly-CSharp
+        m_MethodName: UpgradeMedKitHealAmount
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &797469437
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5389,7 +5425,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: $70
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 44e81039798701348864ccada76c9456, type: 2}
   m_sharedMaterial: {fileID: -761011095782403961, guid: 44e81039798701348864ccada76c9456, type: 2}
@@ -7952,7 +7988,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: $70
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 44e81039798701348864ccada76c9456, type: 2}
   m_sharedMaterial: {fileID: -761011095782403961, guid: 44e81039798701348864ccada76c9456, type: 2}
@@ -8369,7 +8405,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: $70
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 44e81039798701348864ccada76c9456, type: 2}
   m_sharedMaterial: {fileID: -761011095782403961, guid: 44e81039798701348864ccada76c9456, type: 2}
@@ -8783,7 +8819,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1215299063}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1496473434}
+        m_TargetAssemblyTypeName: UpgradeManager, Assembly-CSharp
+        m_MethodName: UpgradeDamage
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1215299063
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8935,7 +8983,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1273969644}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1496473434}
+        m_TargetAssemblyTypeName: UpgradeManager, Assembly-CSharp
+        m_MethodName: UpgradeMaxHealth
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1273969644
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9902,6 +9962,7 @@ GameObject:
   - component: {fileID: 1418664213}
   - component: {fileID: 1418664216}
   - component: {fileID: 1418664217}
+  - component: {fileID: 1418664218}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -10097,6 +10158,20 @@ MonoBehaviour:
   regenRate: 1
   medKitHealAmount: 20
   healthBar: {fileID: 1476860955}
+--- !u!114 &1418664218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1418664208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee46a4735f78fe249be77d71281c68a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: 0
+  scoreText: {fileID: 54358299}
 --- !u!1 &1428998388
 GameObject:
   m_ObjectHideFlags: 0
@@ -11177,7 +11252,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: $70
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 44e81039798701348864ccada76c9456, type: 2}
   m_sharedMaterial: {fileID: -761011095782403961, guid: 44e81039798701348864ccada76c9456, type: 2}
@@ -13994,7 +14069,8 @@ MonoBehaviour:
   healthBarFill: {fileID: 1513785895}
   healthText: {fileID: 1783450587}
   coinPrefab: {fileID: 5009905749650396165, guid: 92c273427b0b5484492931ab3b41857a, type: 3}
-  coinDropAmount: 1
+  coinDropAmount: 100
+  scoreValue: 10
 --- !u!114 &1952692042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14230,7 +14306,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1978415066}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1496473434}
+        m_TargetAssemblyTypeName: UpgradeManager, Assembly-CSharp
+        m_MethodName: UpgradeRegenRate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1978415066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14394,7 +14482,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: $70
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 44e81039798701348864ccada76c9456, type: 2}
   m_sharedMaterial: {fileID: -761011095782403961, guid: 44e81039798701348864ccada76c9456, type: 2}

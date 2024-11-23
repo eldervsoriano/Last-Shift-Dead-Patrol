@@ -40,4 +40,10 @@ public class Coin : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    private void Update()
+    {
+        transform.Rotate(0, 100 * Time.deltaTime, 0); // Rotate around Y-axis
+    }
+
 }
