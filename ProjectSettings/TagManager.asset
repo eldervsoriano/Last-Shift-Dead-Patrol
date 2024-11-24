@@ -8,6 +8,7 @@ TagManager:
   - Gun
   - Coin
   - Furniture
+  - Wall
   layers:
   - Default
   - TransparentFX

@@ -21,11 +21,45 @@
 //    }
 //}
 
+//using UnityEngine;
+
+//public class Coin : MonoBehaviour
+//{
+//    public int coinValue = 1;
+
+//    private void OnTriggerEnter(Collider other)
+//    {
+//        if (other.CompareTag("Player"))
+//        {
+//            UpgradeManager upgradeManager = FindObjectOfType<UpgradeManager>();
+//            if (upgradeManager != null)
+//            {
+//                upgradeManager.CollectCoins(coinValue);
+//            }
+
+//            Destroy(gameObject);
+//        }
+//    }
+
+//    private void Update()
+//    {
+//        transform.Rotate(0, 100 * Time.deltaTime, 0); // Rotate around Y-axis
+//    }
+
+//}
+
+
 using UnityEngine;
 
 public class Coin : MonoBehaviour
 {
     public int coinValue = 1;
+
+    private void Start()
+    {
+        // Automatically destroy the coin after 5 seconds
+        Destroy(gameObject, 5f);
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -37,6 +71,7 @@ public class Coin : MonoBehaviour
                 upgradeManager.CollectCoins(coinValue);
             }
 
+            // Destroy the coin when collected
             Destroy(gameObject);
         }
     }
@@ -45,5 +80,5 @@ public class Coin : MonoBehaviour
     {
         transform.Rotate(0, 100 * Time.deltaTime, 0); // Rotate around Y-axis
     }
-
 }
+
