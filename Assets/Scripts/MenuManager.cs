@@ -585,6 +585,588 @@
 //    }
 //}
 
+//using UnityEngine;
+//using UnityEngine.SceneManagement;
+//using System.Collections.Generic; // Import for Stack
+
+//public class MenuManager : MonoBehaviour
+//{
+//    public GameObject mainMenuPanel;
+//    public GameObject homePanel;
+//    public GameObject settingsPanel;
+//    public GameObject aboutPanel;
+//    public GameObject shopPanel;
+//    public GameObject quitConfirmationPanel;
+//    public GameObject exitConfirmationPanel; // New Exit Confirmation Panel
+//    public GameObject scoreboardPanel;      // New Scoreboard Panel
+
+//    private bool isGamePaused = false;
+
+//    // Stack to track the order of opened panels
+//    private Stack<GameObject> panelStack = new Stack<GameObject>();
+
+//    void Start()
+//    {
+//        // Ensure all panels are initially hidden except the Home Panel
+//        mainMenuPanel.SetActive(false);
+//        homePanel.SetActive(false);
+//        settingsPanel.SetActive(false);
+//        aboutPanel.SetActive(false);
+//        shopPanel.SetActive(false);
+//        quitConfirmationPanel.SetActive(false);
+//        exitConfirmationPanel.SetActive(false); // Ensure Exit Confirmation Panel is hidden
+//        scoreboardPanel.SetActive(false); // Ensure Scoreboard Panel is hidden
+//        ResumeGameLogic(); // Ensure game starts running
+//    }
+
+//    public void OpenMainMenu()
+//    {
+//        Debug.Log("Opening Main Menu...");
+//        OpenPanel(mainMenuPanel);
+//        PauseGame();
+//    }
+
+//    public void ResumeGame()
+//    {
+//        Debug.Log("Resuming game...");
+//        CloseAllPanels();
+//        ResumeGameLogic();
+//    }
+
+//    public void RestartGame()
+//    {
+//        Debug.Log("Restarting game...");
+//        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+//        ResumeGameLogic();
+//    }
+
+//    public void OpenSettings()
+//    {
+//        Debug.Log("Opening Settings...");
+//        OpenPanel(settingsPanel);
+//    }
+
+//    public void OpenAbout()
+//    {
+//        Debug.Log("Opening About...");
+//        OpenPanel(aboutPanel);
+//    }
+
+//    public void OpenShop()
+//    {
+//        Debug.Log("Opening Shop...");
+//        OpenPanel(shopPanel);
+//    }
+
+//    public void BackToHomePanel()
+//    {
+//        Debug.Log("Opening Quit Confirmation...");
+//        OpenPanel(quitConfirmationPanel);
+//    }
+
+//    public void OpenExitConfirmation()
+//    {
+//        Debug.Log("Opening Exit Confirmation...");
+//        OpenPanel(exitConfirmationPanel);
+//    }
+
+//    // New method to open the Scoreboard Panel
+//    public void OpenScoreboard()
+//    {
+//        Debug.Log("Opening Scoreboard...");
+//        OpenPanel(scoreboardPanel);
+//    }
+
+//    public void ConfirmQuit()
+//    {
+//        Debug.Log("Returning to Home...");
+//        CloseAllPanels();
+//        homePanel.SetActive(true);
+//        PauseGame();
+//    }
+
+//    public void CancelQuit()
+//    {
+//        Debug.Log("Canceling Quit...");
+//        CloseCurrentPanel();
+//    }
+
+//    public void ConfirmExit()
+//    {
+//        Debug.Log("Exiting the game...");
+//        Application.Quit(); // This will exit the application
+//    }
+
+//    public void CancelExit()
+//    {
+//        Debug.Log("Canceling Exit...");
+//        CloseCurrentPanel();
+//    }
+
+//    /// <summary>
+//    /// Opens a panel and adds it to the stack.
+//    /// </summary>
+//    /// <param name="panel">The panel to open.</param>
+//    public void OpenPanel(GameObject panel)
+//    {
+//        if (panel == null) return;
+
+//        Debug.Log("Opening panel: " + panel.name);
+//        panel.SetActive(true);
+//        panelStack.Push(panel); // Track the panel in the stack
+//        PauseGame();
+//    }
+
+//    /// <summary>
+//    /// Closes the most recently opened panel without affecting the rest.
+//    /// </summary>
+//    public void CloseCurrentPanel()
+//    {
+//        if (panelStack.Count > 0)
+//        {
+//            GameObject currentPanel = panelStack.Pop();
+//            currentPanel.SetActive(false);
+//            Debug.Log("Closed panel: " + currentPanel.name);
+
+//            // Resume the game if no panels are left open
+//            if (panelStack.Count == 0)
+//            {
+//                ResumeGameLogic();
+//            }
+//        }
+//        else
+//        {
+//            Debug.Log("No panels to close.");
+//        }
+//    }
+
+//    /// <summary>
+//    /// Closes all open panels and clears the stack.
+//    /// </summary>
+//    public void CloseAllPanels()
+//    {
+//        while (panelStack.Count > 0)
+//        {
+//            GameObject panel = panelStack.Pop();
+//            panel.SetActive(false);
+//            Debug.Log("Closed panel: " + panel.name);
+//        }
+//        ResumeGameLogic();
+//    }
+
+//    private void PauseGame()
+//    {
+//        Debug.Log("Pausing game...");
+//        Time.timeScale = 0f;
+//        isGamePaused = true;
+//    }
+
+//    private void ResumeGameLogic()
+//    {
+//        Debug.Log("Resuming game logic...");
+//        Time.timeScale = 1f;
+//        isGamePaused = false;
+//    }
+//}
+
+
+
+
+
+//using UnityEngine;
+//using UnityEngine.SceneManagement;
+//using System.Collections.Generic; // Import for Stack
+
+//public class MenuManager : MonoBehaviour
+//{
+//    public GameObject mainMenuPanel;
+//    public GameObject homePanel;
+//    public GameObject settingsPanel;
+//    public GameObject aboutPanel;
+//    public GameObject shopPanel;
+//    public GameObject quitConfirmationPanel;
+//    public GameObject exitConfirmationPanel; // New Exit Confirmation Panel
+//    public GameObject scoreboardPanel;      // New Scoreboard Panel
+
+//    private bool isGamePaused = false;
+
+//    // Stack to track the order of opened panels
+//    private Stack<GameObject> panelStack = new Stack<GameObject>();
+
+//    void Start()
+//    {
+//        // Ensure all panels are initially hidden except the Home Panel
+//        mainMenuPanel.SetActive(false);
+//        homePanel.SetActive(false);
+//        settingsPanel.SetActive(false);
+//        aboutPanel.SetActive(false);
+//        shopPanel.SetActive(false);
+//        quitConfirmationPanel.SetActive(false);
+//        exitConfirmationPanel.SetActive(false); // Ensure Exit Confirmation Panel is hidden
+//        scoreboardPanel.SetActive(false); // Ensure Scoreboard Panel is hidden
+//        ResumeGameLogic(); // Ensure game starts running
+//    }
+
+//    public void OpenMainMenu()
+//    {
+//        Debug.Log("Opening Main Menu...");
+//        OpenPanel(mainMenuPanel);
+//        PauseGame();
+//    }
+
+//    public void ResumeGame()
+//    {
+//        Debug.Log("Resuming game...");
+//        CloseAllPanels();
+//        ResumeGameLogic();
+//    }
+
+//    public void RestartGame()
+//    {
+//        Debug.Log("Restarting game...");
+//        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+//        ResumeGameLogic();
+//    }
+
+//    public void OpenSettings()
+//    {
+//        Debug.Log("Opening Settings...");
+//        OpenPanel(settingsPanel);
+//        // Pause the gameplay but don't affect audio
+//        PauseGameWithoutAffectingAudio();
+//    }
+
+//    public void OpenAbout()
+//    {
+//        Debug.Log("Opening About...");
+//        OpenPanel(aboutPanel);
+//    }
+
+//    public void OpenShop()
+//    {
+//        Debug.Log("Opening Shop...");
+//        OpenPanel(shopPanel);
+//    }
+
+//    public void BackToHomePanel()
+//    {
+//        Debug.Log("Opening Quit Confirmation...");
+//        OpenPanel(quitConfirmationPanel);
+//    }
+
+//    public void OpenExitConfirmation()
+//    {
+//        Debug.Log("Opening Exit Confirmation...");
+//        OpenPanel(exitConfirmationPanel);
+//    }
+
+//    // New method to open the Scoreboard Panel
+//    public void OpenScoreboard()
+//    {
+//        Debug.Log("Opening Scoreboard...");
+//        OpenPanel(scoreboardPanel);
+//    }
+
+//    public void ConfirmQuit()
+//    {
+//        Debug.Log("Returning to Home...");
+//        CloseAllPanels();
+//        homePanel.SetActive(true);
+//        PauseGame();
+//    }
+
+//    public void CancelQuit()
+//    {
+//        Debug.Log("Canceling Quit...");
+//        CloseCurrentPanel();
+//    }
+
+//    public void ConfirmExit()
+//    {
+//        Debug.Log("Exiting the game...");
+//        Application.Quit(); // This will exit the application
+//    }
+
+//    public void CancelExit()
+//    {
+//        Debug.Log("Canceling Exit...");
+//        CloseCurrentPanel();
+//    }
+
+//    /// <summary>
+//    /// Opens a panel and adds it to the stack.
+//    /// </summary>
+//    /// <param name="panel">The panel to open.</param>
+//    public void OpenPanel(GameObject panel)
+//    {
+//        if (panel == null) return;
+
+//        Debug.Log("Opening panel: " + panel.name);
+//        panel.SetActive(true);
+//        panelStack.Push(panel); // Track the panel in the stack
+//    }
+
+//    /// <summary>
+//    /// Closes the most recently opened panel without affecting the rest.
+//    /// </summary>
+//    public void CloseCurrentPanel()
+//    {
+//        if (panelStack.Count > 0)
+//        {
+//            GameObject currentPanel = panelStack.Pop();
+//            currentPanel.SetActive(false);
+//            Debug.Log("Closed panel: " + currentPanel.name);
+
+//            // Resume the game if no panels are left open
+//            if (panelStack.Count == 0)
+//            {
+//                ResumeGameLogic();
+//            }
+//        }
+//        else
+//        {
+//            Debug.Log("No panels to close.");
+//        }
+//    }
+
+//    /// <summary>
+//    /// Closes all open panels and clears the stack.
+//    /// </summary>
+//    public void CloseAllPanels()
+//    {
+//        while (panelStack.Count > 0)
+//        {
+//            GameObject panel = panelStack.Pop();
+//            panel.SetActive(false);
+//            Debug.Log("Closed panel: " + panel.name);
+//        }
+//        ResumeGameLogic();
+//    }
+
+//    private void PauseGame()
+//    {
+//        Debug.Log("Pausing game...");
+//        Time.timeScale = 0f; // Pauses the gameplay, but not the audio
+//        isGamePaused = true;
+//    }
+
+//    private void PauseGameWithoutAffectingAudio()
+//    {
+//        // Only pause gameplay logic, not the audio
+//        Debug.Log("Pausing gameplay (not audio)...");
+//        Time.timeScale = 0f;
+//        isGamePaused = true;
+//    }
+
+//    private void ResumeGameLogic()
+//    {
+//        Debug.Log("Resuming game logic...");
+//        Time.timeScale = 1f;
+//        isGamePaused = false;
+//    }
+//}
+
+
+//using UnityEngine;
+//using UnityEngine.SceneManagement;
+//using System.Collections.Generic; // Import for Stack
+
+//public class MenuManager : MonoBehaviour
+//{
+//    public GameObject mainMenuPanel;
+//    public GameObject homePanel;
+//    public GameObject settingsPanel;
+//    public GameObject aboutPanel;
+//    public GameObject shopPanel;
+//    public GameObject quitConfirmationPanel;
+//    public GameObject exitConfirmationPanel; // New Exit Confirmation Panel
+//    public GameObject scoreboardPanel;      // New Scoreboard Panel
+
+//    // Reference to SoundManager
+//    public SoundManager soundManager;
+
+//    private bool isGamePaused = false;
+
+//    // Stack to track the order of opened panels
+//    private Stack<GameObject> panelStack = new Stack<GameObject>();
+
+//    void Start()
+//    {
+//        // Ensure all panels are initially hidden except the Home Panel
+//        mainMenuPanel.SetActive(false);
+//        homePanel.SetActive(false);
+//        settingsPanel.SetActive(false);
+//        aboutPanel.SetActive(false);
+//        shopPanel.SetActive(false);
+//        quitConfirmationPanel.SetActive(false);
+//        exitConfirmationPanel.SetActive(false); // Ensure Exit Confirmation Panel is hidden
+//        scoreboardPanel.SetActive(false); // Ensure Scoreboard Panel is hidden
+//        ResumeGameLogic(); // Ensure game starts running
+//    }
+
+//    public void OpenMainMenu()
+//    {
+//        Debug.Log("Opening Main Menu...");
+//        OpenPanel(mainMenuPanel);
+//        PauseGame();
+//    }
+
+//    public void ResumeGame()
+//    {
+//        Debug.Log("Resuming game...");
+//        CloseAllPanels();
+//        soundManager.PlayGameMusic(); // Play the game music
+//        ResumeGameLogic();
+//    }
+
+//    public void RestartGame()
+//    {
+//        Debug.Log("Restarting game...");
+//        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+//        soundManager.PlayGameMusic(); // Play the game music
+//        ResumeGameLogic();
+//    }
+
+//    public void OpenSettings()
+//    {
+//        Debug.Log("Opening Settings...");
+//        OpenPanel(settingsPanel);
+//        // Pause the gameplay but don't affect audio
+//        PauseGameWithoutAffectingAudio();
+//    }
+
+//    public void OpenAbout()
+//    {
+//        Debug.Log("Opening About...");
+//        OpenPanel(aboutPanel);
+//    }
+
+//    public void OpenShop()
+//    {
+//        Debug.Log("Opening Shop...");
+//        OpenPanel(shopPanel);
+//    }
+
+//    public void BackToHomePanel()
+//    {
+//        Debug.Log("Opening Quit Confirmation...");
+//        OpenPanel(quitConfirmationPanel);
+//    }
+
+//    public void OpenExitConfirmation()
+//    {
+//        Debug.Log("Opening Exit Confirmation...");
+//        OpenPanel(exitConfirmationPanel);
+//    }
+
+//    // New method to open the Scoreboard Panel
+//    public void OpenScoreboard()
+//    {
+//        Debug.Log("Opening Scoreboard...");
+//        OpenPanel(scoreboardPanel);
+//    }
+
+//    public void ConfirmQuit()
+//    {
+//        Debug.Log("Returning to Home...");
+//        CloseAllPanels();
+//        homePanel.SetActive(true);
+//        soundManager.PlayHomeMusic(); // Play the home music
+//        PauseGame();
+//    }
+
+//    public void CancelQuit()
+//    {
+//        Debug.Log("Canceling Quit...");
+//        CloseCurrentPanel();
+//    }
+
+//    public void ConfirmExit()
+//    {
+//        Debug.Log("Exiting the game...");
+//        Application.Quit(); // This will exit the application
+//    }
+
+//    public void CancelExit()
+//    {
+//        Debug.Log("Canceling Exit...");
+//        CloseCurrentPanel();
+//    }
+
+//    /// <summary>
+//    /// Opens a panel and adds it to the stack.
+//    /// </summary>
+//    /// <param name="panel">The panel to open.</param>
+//    public void OpenPanel(GameObject panel)
+//    {
+//        if (panel == null) return;
+
+//        Debug.Log("Opening panel: " + panel.name);
+//        panel.SetActive(true);
+//        panelStack.Push(panel); // Track the panel in the stack
+//    }
+
+//    /// <summary>
+//    /// Closes the most recently opened panel without affecting the rest.
+//    /// </summary>
+//    public void CloseCurrentPanel()
+//    {
+//        if (panelStack.Count > 0)
+//        {
+//            GameObject currentPanel = panelStack.Pop();
+//            currentPanel.SetActive(false);
+//            Debug.Log("Closed panel: " + currentPanel.name);
+
+//            // Resume the game if no panels are left open
+//            if (panelStack.Count == 0)
+//            {
+//                ResumeGameLogic();
+//            }
+//        }
+//        else
+//        {
+//            Debug.Log("No panels to close.");
+//        }
+//    }
+
+//    /// <summary>
+//    /// Closes all open panels and clears the stack.
+//    /// </summary>
+//    public void CloseAllPanels()
+//    {
+//        while (panelStack.Count > 0)
+//        {
+//            GameObject panel = panelStack.Pop();
+//            panel.SetActive(false);
+//            Debug.Log("Closed panel: " + panel.name);
+//        }
+//        ResumeGameLogic();
+//    }
+
+//    private void PauseGame()
+//    {
+//        Debug.Log("Pausing game...");
+//        Time.timeScale = 0f; // Pauses the gameplay, but not the audio
+//        isGamePaused = true;
+//    }
+
+//    private void PauseGameWithoutAffectingAudio()
+//    {
+//        // Only pause gameplay logic, not the audio
+//        Debug.Log("Pausing gameplay (not audio)...");
+//        Time.timeScale = 0f;
+//        isGamePaused = true;
+//    }
+
+//    private void ResumeGameLogic()
+//    {
+//        Debug.Log("Resuming game logic...");
+//        Time.timeScale = 1f;
+//        isGamePaused = false;
+//    }
+//}
+
+
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections.Generic; // Import for Stack
@@ -599,6 +1181,9 @@ public class MenuManager : MonoBehaviour
     public GameObject quitConfirmationPanel;
     public GameObject exitConfirmationPanel; // New Exit Confirmation Panel
     public GameObject scoreboardPanel;      // New Scoreboard Panel
+
+    // Reference to SoundManager
+    public SoundManager soundManager;
 
     private bool isGamePaused = false;
 
@@ -616,6 +1201,9 @@ public class MenuManager : MonoBehaviour
         quitConfirmationPanel.SetActive(false);
         exitConfirmationPanel.SetActive(false); // Ensure Exit Confirmation Panel is hidden
         scoreboardPanel.SetActive(false); // Ensure Scoreboard Panel is hidden
+
+        // Disable the home music at the start
+        soundManager.StopHomeMusic();
         ResumeGameLogic(); // Ensure game starts running
     }
 
@@ -630,6 +1218,7 @@ public class MenuManager : MonoBehaviour
     {
         Debug.Log("Resuming game...");
         CloseAllPanels();
+        soundManager.PlayGameMusic(); // Play the in-game music
         ResumeGameLogic();
     }
 
@@ -637,6 +1226,7 @@ public class MenuManager : MonoBehaviour
     {
         Debug.Log("Restarting game...");
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        soundManager.PlayGameMusic(); // Play the in-game music
         ResumeGameLogic();
     }
 
@@ -644,6 +1234,8 @@ public class MenuManager : MonoBehaviour
     {
         Debug.Log("Opening Settings...");
         OpenPanel(settingsPanel);
+        // Pause the gameplay but don't affect audio
+        PauseGameWithoutAffectingAudio();
     }
 
     public void OpenAbout()
@@ -682,6 +1274,8 @@ public class MenuManager : MonoBehaviour
         Debug.Log("Returning to Home...");
         CloseAllPanels();
         homePanel.SetActive(true);
+        soundManager.PlayHomeMusic(); // Play the home music (disable game music)
+        soundManager.StopGameMusic(); // Stop in-game music
         PauseGame();
     }
 
@@ -714,7 +1308,6 @@ public class MenuManager : MonoBehaviour
         Debug.Log("Opening panel: " + panel.name);
         panel.SetActive(true);
         panelStack.Push(panel); // Track the panel in the stack
-        PauseGame();
     }
 
     /// <summary>
@@ -757,6 +1350,14 @@ public class MenuManager : MonoBehaviour
     private void PauseGame()
     {
         Debug.Log("Pausing game...");
+        Time.timeScale = 0f; // Pauses the gameplay, but not the audio
+        isGamePaused = true;
+    }
+
+    private void PauseGameWithoutAffectingAudio()
+    {
+        // Only pause gameplay logic, not the audio
+        Debug.Log("Pausing gameplay (not audio)...");
         Time.timeScale = 0f;
         isGamePaused = true;
     }
@@ -768,6 +1369,7 @@ public class MenuManager : MonoBehaviour
         isGamePaused = false;
     }
 }
+
 
 
 

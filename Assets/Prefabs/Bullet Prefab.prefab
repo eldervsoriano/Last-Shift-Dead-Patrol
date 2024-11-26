@@ -150,5 +150,5 @@ MonoBehaviour:
   damage: 10
   rb: {fileID: -1017082210121363247}
   lifeTime: 1
-  bulletDuplicateCount: 5
+  bulletDuplicateCount: 12
   spreadAngle: 30

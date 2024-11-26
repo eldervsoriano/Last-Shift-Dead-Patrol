@@ -49,14 +49,105 @@
 //}
 
 
+//using UnityEngine;
+
+//public class Coin : MonoBehaviour
+//{
+//    public int coinValue = 1;
+
+//    private void Start()
+//    {
+//        // Automatically destroy the coin after 5 seconds
+//        Destroy(gameObject, 5f);
+//    }
+
+//    private void OnTriggerEnter(Collider other)
+//    {
+//        if (other.CompareTag("Player"))
+//        {
+//            UpgradeManager upgradeManager = FindObjectOfType<UpgradeManager>();
+//            if (upgradeManager != null)
+//            {
+//                upgradeManager.CollectCoins(coinValue);
+//            }
+
+//            // Destroy the coin when collected
+//            Destroy(gameObject);
+//        }
+//    }
+
+//    private void Update()
+//    {
+//        transform.Rotate(0, 100 * Time.deltaTime, 0); // Rotate around Y-axis
+//    }
+//}
+
+//using UnityEngine;
+
+//public class Coin : MonoBehaviour
+//{
+//    public int coinValue = 1;
+//    public AudioClip collectSound; // Sound effect for coin collection
+//    private AudioSource audioSource; // The AudioSource component
+
+//    private void Start()
+//    {
+//        // Get the AudioSource component attached to this coin
+//        audioSource = GetComponent<AudioSource>();
+
+//        // Automatically destroy the coin after 5 seconds
+//        Destroy(gameObject, 5f);
+//    }
+
+//    private void OnTriggerEnter(Collider other)
+//    {
+//        if (other.CompareTag("Player"))
+//        {
+//            // Find and update the UpgradeManager with the collected coin
+//            UpgradeManager upgradeManager = FindObjectOfType<UpgradeManager>();
+//            if (upgradeManager != null)
+//            {
+//                upgradeManager.CollectCoins(coinValue);
+//            }
+
+//            // Debug log to confirm the collision
+//            Debug.Log("Coin collected!");
+
+//            // Play the coin collection sound using AudioSource and respect volume settings
+//            if (collectSound != null && audioSource != null)
+//            {
+//                Debug.Log("Playing coin sound...");
+//                audioSource.PlayOneShot(collectSound);  // Play the coin sound
+//            }
+//            else
+//            {
+//                Debug.LogError("Collect sound or AudioSource is missing!");
+//            }
+
+//            // Destroy the coin when collected
+//            Destroy(gameObject);
+//        }
+//    }
+
+//    private void Update()
+//    {
+//        transform.Rotate(0, 100 * Time.deltaTime, 0); // Rotate around Y-axis
+//    }
+//}
+
 using UnityEngine;
 
 public class Coin : MonoBehaviour
 {
     public int coinValue = 1;
+    public AudioClip collectSound; // Sound effect for coin collection
+    private SoundManager soundManager; // Reference to the SoundManager
 
     private void Start()
     {
+        // Find the SoundManager in the scene (it should be a singleton or attached to a GameObject in the scene)
+        soundManager = FindObjectOfType<SoundManager>();
+
         // Automatically destroy the coin after 5 seconds
         Destroy(gameObject, 5f);
     }
@@ -65,10 +156,17 @@ public class Coin : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            // Find and update the UpgradeManager with the collected coin
             UpgradeManager upgradeManager = FindObjectOfType<UpgradeManager>();
             if (upgradeManager != null)
             {
                 upgradeManager.CollectCoins(coinValue);
+            }
+
+            // Play the coin collection sound using SoundManager's PlaySFX method
+            if (collectSound != null && soundManager != null)
+            {
+                soundManager.PlaySFX(collectSound); // Play sound through SoundManager
             }
 
             // Destroy the coin when collected
@@ -81,4 +179,5 @@ public class Coin : MonoBehaviour
         transform.Rotate(0, 100 * Time.deltaTime, 0); // Rotate around Y-axis
     }
 }
+
 
