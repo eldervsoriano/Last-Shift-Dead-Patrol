@@ -93,7 +93,7 @@
 using UnityEngine;
 using UnityEngine.AI;
 
-public class EnemyZombie : MonoBehaviour
+public class BiggieZombie : MonoBehaviour
 {
     private Transform player;               // Reference to the player's Transform
     private NavMeshAgent navAgent;          // Reference to the NavMeshAgent
