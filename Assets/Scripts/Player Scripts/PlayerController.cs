@@ -112,11 +112,14 @@ public class PlayerController : MonoBehaviour
         // Move the player based on joystick input
         _rigidbody.velocity = new Vector3(_joystick.Horizontal * _moveSpeed, _rigidbody.velocity.y, _joystick.Vertical * _moveSpeed);
 
-        // Update the "CharacterAnimation" integer parameter based on joystick movement
+        // Check joystick input to determine the movement
         if (_joystick.Horizontal != 0 || _joystick.Vertical != 0)
         {
             // Joystick is moving, set to walking animation (1)
             _animator.SetInteger("CharacterAnimations", 1);
+
+            // Debug log to check joystick input
+           // Debug.Log("Joystick Input: Horizontal = " + _joystick.Horizontal + ", Vertical = " + _joystick.Vertical);
         }
         else
         {
@@ -124,6 +127,9 @@ public class PlayerController : MonoBehaviour
             _animator.SetInteger("CharacterAnimations", 0);
         }
     }
+
+
+
 }
 
 

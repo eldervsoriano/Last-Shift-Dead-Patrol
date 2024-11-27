@@ -739,6 +739,17 @@ public class UpgradeManager : MonoBehaviour
         UpdateUI();
     }
 
+    //private void SaveUpgradeData()
+    //{
+    //    PlayerPrefs.SetInt(COINS_KEY, coins);
+    //    PlayerPrefs.SetInt(MAX_HEALTH_KEY, maxHealthLevel);
+    //    PlayerPrefs.SetInt(REGEN_RATE_KEY, regenRateLevel);
+    //    PlayerPrefs.SetInt(MED_KIT_KEY, medKitLevel);
+    //    PlayerPrefs.SetInt(DAMAGE_KEY, damageLevel);
+    //    PlayerPrefs.SetInt(BULLET_DUPLICATION_KEY, bulletDuplicationLevel);
+    //    PlayerPrefs.Save();
+    //}
+
     private void SaveUpgradeData()
     {
         PlayerPrefs.SetInt(COINS_KEY, coins);
@@ -746,9 +757,46 @@ public class UpgradeManager : MonoBehaviour
         PlayerPrefs.SetInt(REGEN_RATE_KEY, regenRateLevel);
         PlayerPrefs.SetInt(MED_KIT_KEY, medKitLevel);
         PlayerPrefs.SetInt(DAMAGE_KEY, damageLevel);
-        PlayerPrefs.SetInt(BULLET_DUPLICATION_KEY, bulletDuplicationLevel);
+        PlayerPrefs.SetInt(BULLET_DUPLICATION_KEY, bulletDuplicationLevel); // Save the bullet duplication level
         PlayerPrefs.Save();
     }
+
+
+
+    //private void LoadUpgradeData()
+    //{
+    //    coins = PlayerPrefs.GetInt(COINS_KEY, 0);
+    //    maxHealthLevel = Mathf.Min(PlayerPrefs.GetInt(MAX_HEALTH_KEY, 1), maxMaxHealthLevel);
+    //    regenRateLevel = PlayerPrefs.GetInt(REGEN_RATE_KEY, 1);
+    //    medKitLevel = PlayerPrefs.GetInt(MED_KIT_KEY, 1);
+    //    damageLevel = PlayerPrefs.GetInt(DAMAGE_KEY, 1);
+    //    bulletDuplicationLevel = PlayerPrefs.GetInt(BULLET_DUPLICATION_KEY, 1);
+
+    //    playerHealth.UpgradeMaxHealth((maxHealthLevel - 1) * 10);
+    //    playerHealth.UpgradeRegenRate((regenRateLevel - 1) * 0.5f);
+    //    playerHealth.UpgradeMedKitHealAmount((medKitLevel - 1) * 5);
+    //    bulletPrefab.UpgradeDamage((damageLevel - 1) * 2);
+    //    bulletPrefab.UpgradeBulletDuplication((bulletDuplicationLevel - 1));
+    //}
+
+    //private void LoadUpgradeData()
+    //{
+    //    coins = PlayerPrefs.GetInt(COINS_KEY, 0);
+    //    maxHealthLevel = Mathf.Min(PlayerPrefs.GetInt(MAX_HEALTH_KEY, 1), maxMaxHealthLevel);
+    //    regenRateLevel = PlayerPrefs.GetInt(REGEN_RATE_KEY, 1);
+    //    medKitLevel = PlayerPrefs.GetInt(MED_KIT_KEY, 1);
+    //    damageLevel = PlayerPrefs.GetInt(DAMAGE_KEY, 1);
+
+    //    // Load bullet duplication level and cap it at maxBulletDuplicationLevel
+    //    bulletDuplicationLevel = Mathf.Min(PlayerPrefs.GetInt(BULLET_DUPLICATION_KEY, 1), maxBulletDuplicationLevel);
+
+    //    // Apply the loaded upgrade data to the player and bullet prefab
+    //    playerHealth.UpgradeMaxHealth((maxHealthLevel - 1) * 10);
+    //    playerHealth.UpgradeRegenRate((regenRateLevel - 1) * 0.5f);
+    //    playerHealth.UpgradeMedKitHealAmount((medKitLevel - 1) * 5);
+    //    bulletPrefab.UpgradeDamage((damageLevel - 1) * 2);
+    //    bulletPrefab.UpgradeBulletDuplication(bulletDuplicationLevel - 1); // Apply the correct level for duplication
+    //}
 
     private void LoadUpgradeData()
     {
@@ -757,14 +805,21 @@ public class UpgradeManager : MonoBehaviour
         regenRateLevel = PlayerPrefs.GetInt(REGEN_RATE_KEY, 1);
         medKitLevel = PlayerPrefs.GetInt(MED_KIT_KEY, 1);
         damageLevel = PlayerPrefs.GetInt(DAMAGE_KEY, 1);
-        bulletDuplicationLevel = PlayerPrefs.GetInt(BULLET_DUPLICATION_KEY, 1);
 
+        // Load bullet duplication level and cap it at maxBulletDuplicationLevel
+        bulletDuplicationLevel = Mathf.Min(PlayerPrefs.GetInt(BULLET_DUPLICATION_KEY, 1), maxBulletDuplicationLevel);
+
+        // Apply the loaded upgrade data to the player and bullet prefab
         playerHealth.UpgradeMaxHealth((maxHealthLevel - 1) * 10);
         playerHealth.UpgradeRegenRate((regenRateLevel - 1) * 0.5f);
         playerHealth.UpgradeMedKitHealAmount((medKitLevel - 1) * 5);
         bulletPrefab.UpgradeDamage((damageLevel - 1) * 2);
-        bulletPrefab.UpgradeBulletDuplication((bulletDuplicationLevel - 1));
+
+        // Bullet duplication level should be set directly, not upgraded again.
+        bulletPrefab.SetBulletDuplicationLevel(bulletDuplicationLevel);
     }
+
+
 
     public void CollectCoins(int amount)
     {
@@ -845,6 +900,42 @@ public class UpgradeManager : MonoBehaviour
         }
     }
 
+    //public void UpgradeBulletDuplication()
+    //{
+    //    if (bulletDuplicationLevel >= maxBulletDuplicationLevel)
+    //    {
+    //        Debug.Log("Bullet Duplication is already at maximum level!");
+    //        return;
+    //    }
+
+    //    int cost = bulletDuplicationLevel * 15;
+    //    if (TryPurchase(cost))
+    //    {
+    //        bulletDuplicationLevel++;
+    //        bulletPrefab.UpgradeBulletDuplication(1);
+    //        UpdateUI();
+    //        SaveUpgradeData();
+    //    }
+    //}
+
+    //public void UpgradeBulletDuplication()
+    //{
+    //    if (bulletDuplicationLevel >= maxBulletDuplicationLevel)
+    //    {
+    //        Debug.Log("Bullet Duplication is already at maximum level!");
+    //        return;
+    //    }
+
+    //    int cost = bulletDuplicationLevel * 15;
+    //    if (TryPurchase(cost))
+    //    {
+    //        bulletDuplicationLevel++;
+    //        bulletPrefab.UpgradeBulletDuplication(1); // Upgrade the duplication by 1
+    //        UpdateUI();
+    //        SaveUpgradeData();
+    //    }
+    //}
+
     public void UpgradeBulletDuplication()
     {
         if (bulletDuplicationLevel >= maxBulletDuplicationLevel)
@@ -857,11 +948,13 @@ public class UpgradeManager : MonoBehaviour
         if (TryPurchase(cost))
         {
             bulletDuplicationLevel++;
-            bulletPrefab.UpgradeBulletDuplication(1);
+            bulletPrefab.UpgradeBulletDuplication(1); // Upgrade the duplication by 1
             UpdateUI();
             SaveUpgradeData();
         }
     }
+
+
 
     public void ResetUpgrades()
     {

@@ -144,10 +144,19 @@ public class Bullet : MonoBehaviour
         damage += amount; // Increase bullet damage
     }
 
+    //public void UpgradeBulletDuplication(int count)
+    //{
+    //    bulletDuplicateCount += count; // Increase the number of duplicate bullets
+    //}
+
     public void UpgradeBulletDuplication(int count)
     {
-        bulletDuplicateCount += count; // Increase the number of duplicate bullets
+        // Ensure the bullet duplication count is not exceeding the max allowed level
+        bulletDuplicateCount = Mathf.Min(bulletDuplicateCount + count, 5); // Cap it at 5
+
+        Debug.Log("Bullet Duplication upgraded. Current count: " + bulletDuplicateCount);
     }
+
 
     public void ResetStats()
     {
@@ -155,6 +164,14 @@ public class Bullet : MonoBehaviour
         bulletDuplicateCount = 0;
 
         Debug.Log("Bullet stats reset to defaults.");
+    }
+
+    public void SetBulletDuplicationLevel(int level)
+    {
+        // Set the bullet duplication count directly, without applying upgrades again.
+        bulletDuplicateCount = level;
+
+        Debug.Log("Bullet Duplication Level set to: " + bulletDuplicateCount);
     }
 
 }

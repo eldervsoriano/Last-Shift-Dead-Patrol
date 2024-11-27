@@ -600,10 +600,10 @@ public class PlayerAttackController : MonoBehaviour
             }
 
             // Reset the animation to idle/walk
-            if (!_isFiring)
-            {
-                _animator.SetInteger("CharacterAnimations", 0);  // '0' for idle or walking animation
-            }
+            //if (!_isFiring)
+            //{
+            //    _animator.SetInteger("CharacterAnimations", 0);  // '0' for idle or walking animation
+            //}
         }
     }
 
