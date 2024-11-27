@@ -1205,6 +1205,7 @@ public class MenuManager : MonoBehaviour
         // Disable the home music at the start
         soundManager.StopHomeMusic();
         ResumeGameLogic(); // Ensure game starts running
+        Application.targetFrameRate = 90;
     }
 
     public void OpenMainMenu()
