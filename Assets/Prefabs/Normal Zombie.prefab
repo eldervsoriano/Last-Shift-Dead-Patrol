@@ -573,7 +573,7 @@ MonoBehaviour:
   currentHealth: 0
   healthBarFill: {fileID: 2749323302111800294}
   healthText: {fileID: 8532625684858819718}
-  coinPrefab: {fileID: 5009905749650396165, guid: 92c273427b0b5484492931ab3b41857a, type: 3}
+  coinPrefab: {fileID: 4139901798266296659, guid: 6f8f16a74844a9d41ba5cc3a5cb2e32c, type: 3}
   medKitPrefab: {fileID: 7903832516514181591, guid: 6350137a05342d74399b2ea5681f4b82, type: 3}
   coinDropAmount: 100
   scoreValue: 10

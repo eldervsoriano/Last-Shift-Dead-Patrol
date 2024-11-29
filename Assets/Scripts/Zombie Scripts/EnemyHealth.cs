@@ -273,7 +273,12 @@ public class EnemyHealth : MonoBehaviour
         }
 
         // Drop coins
-        for (int i = 0; i < coinDropAmount; i++)
+        //for (int i = 0; i < coinDropAmount; i++)
+        //{
+        //    Instantiate(coinPrefab, transform.position, Quaternion.identity);
+        //}
+
+        if (coinPrefab != null)
         {
             Instantiate(coinPrefab, transform.position, Quaternion.identity);
         }
