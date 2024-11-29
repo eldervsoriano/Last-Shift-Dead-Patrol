@@ -97,6 +97,7 @@ public class BiggieZombie : MonoBehaviour
 {
     private Transform player;               // Reference to the player's Transform
     private NavMeshAgent navAgent;          // Reference to the NavMeshAgent
+    private Rigidbody rb;                   // Reference to the Rigidbody
     public float enemyDetectionRange;       // Detection range for the zombie
     public float enemyAttackRange;          // Attack range for the zombie
     public Animator animator;               // Animator for zombie animations
@@ -110,6 +111,7 @@ public class BiggieZombie : MonoBehaviour
     void Start()
     {
         navAgent = GetComponent<NavMeshAgent>();
+        rb = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
 
         // Automatically find the player GameObject and its Transform
@@ -123,6 +125,9 @@ public class BiggieZombie : MonoBehaviour
         {
             Debug.LogError("Player object not found! Ensure the player has the 'Player' tag.");
         }
+
+        // Ensure Rigidbody doesn't interfere with NavMeshAgent
+        rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
     }
 
     private void Update()
@@ -132,6 +137,9 @@ public class BiggieZombie : MonoBehaviour
         // Call the methods to follow and attack the player
         FollowPlayer();
         AttackPlayer();
+
+        // Maintain proper rotation
+        RotateTowardsPlayer();
     }
 
     private void FollowPlayer()
@@ -143,6 +151,11 @@ public class BiggieZombie : MonoBehaviour
         {
             // Set the destination to the player's position
             navAgent.SetDestination(player.position);
+            animator.SetInteger("BiggieZombieAnimations", 1); // Set to walk animation
+        }
+        else
+        {
+            animator.SetInteger("BiggieZombieAnimations", 0); // Set to idle animation
         }
     }
 
@@ -158,6 +171,8 @@ public class BiggieZombie : MonoBehaviour
             // Stop the zombie from moving when it is attacking the player
             navAgent.isStopped = true;
 
+            animator.SetInteger("BiggieZombieAnimations", 2); // Set to attack animation
+
             // Check if playerHealth reference is valid
             if (playerHealth != null)
             {
@@ -168,6 +183,35 @@ public class BiggieZombie : MonoBehaviour
         {
             // Resume movement if player moves out of attack range
             navAgent.isStopped = false;
+            animator.SetInteger("BiggieZombieAnimations", 1); // Set to walk animation
+        }
+    }
+
+    private void RotateTowardsPlayer()
+    {
+        // Get the direction to the player (on the Y axis plane)
+        Vector3 direction = player.position - transform.position;
+        direction.y = 0; // Keep the rotation in the horizontal plane (X-Z plane)
+
+        // Create a rotation based on the direction to the player
+        Quaternion targetRotation = Quaternion.LookRotation(direction);
+
+        // Rotate the zombie smoothly towards the player
+        float rotationSpeed = 5f; // Adjust this value for smoother or faster rotation
+        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * rotationSpeed);
+    }
+
+    private void FixedUpdate()
+    {
+        // Ensure the zombie stays grounded
+        if (!navAgent.isOnNavMesh)
+        {
+            // Reposition the zombie if it's off the NavMesh
+            NavMeshHit hit;
+            if (NavMesh.SamplePosition(transform.position, out hit, 1f, NavMesh.AllAreas))
+            {
+                navAgent.Warp(hit.position);
+            }
         }
     }
 
@@ -187,7 +231,6 @@ public class BiggieZombie : MonoBehaviour
         // Resume movement when no longer colliding with the player
         if (collision.transform == player)
         {
-            // You can uncomment the following line if you want to stop movement
             navAgent.isStopped = false;
         }
     }

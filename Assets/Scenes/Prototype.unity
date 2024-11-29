@@ -570,7 +570,7 @@ MonoBehaviour:
   gameMusicSource: {fileID: 2065227857}
   sfxSources:
   - {fileID: 1418664219}
-  - {fileID: 1086319489277967509}
+  - {fileID: 6967324356565524459, guid: 92c273427b0b5484492931ab3b41857a, type: 3}
   - {fileID: 164001170}
   musicSlider: {fileID: 271138713}
   sfxSlider: {fileID: 159328284}
@@ -13929,7 +13929,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1716484420
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13943,9 +13943,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zombiePrefabs:
-  - {fileID: 8944550039025790389, guid: 4dc30bcf8e835ba4dba1b17c9289c163, type: 3}
-  - {fileID: 1275374150975379680, guid: 8bf7faa0e74ec7049873d3d4cbd6f203, type: 3}
-  - {fileID: 8901719015775961879, guid: 84d5cd83a9838404fb8a54d0729ba8fc, type: 3}
+  - {fileID: 756391658591316910, guid: 56b8daa249cbc1341ae2561b39162d48, type: 3}
+  - {fileID: 4818544579653733929, guid: bafa70a01a12e0f499eb54fee4da5df3, type: 3}
+  - {fileID: 8411651596271569610, guid: a1e3d0ff8db52b0449009be211aabbb3, type: 3}
+  - {fileID: 756391658591316910, guid: 56b8daa249cbc1341ae2561b39162d48, type: 3}
   spawnPoints:
   - {fileID: 1445000467}
   - {fileID: 1261967448}
@@ -17099,7 +17100,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7903832516514181591, guid: 6350137a05342d74399b2ea5681f4b82, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -25515,11 +25516,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!82 &1086319489277967509 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 6967324356565524459, guid: 92c273427b0b5484492931ab3b41857a, type: 3}
-  m_PrefabInstance: {fileID: 5134454755305309495}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1088404313844877921
 Transform:
   m_ObjectHideFlags: 0
@@ -56431,6 +56427,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin
       objectReference: {fileID: 0}
+    - target: {fileID: 3122242352210786237, guid: 92c273427b0b5484492931ab3b41857a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5494543868539149899, guid: 92c273427b0b5484492931ab3b41857a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 21.169094
@@ -69155,67 +69155,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1001 &6893776849221863990
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1275374150975379680, guid: 8bf7faa0e74ec7049873d3d4cbd6f203, type: 3}
-      propertyPath: m_Name
-      value: RunnerZombieAnimation
-      objectReference: {fileID: 0}
-    - target: {fileID: 2752362122831625081, guid: 8bf7faa0e74ec7049873d3d4cbd6f203, type: 3}
-      propertyPath: enemyAttackRange
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8925753768622010228, guid: 8bf7faa0e74ec7049873d3d4cbd6f203, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 36.328846
-      objectReference: {fileID: 0}
-    - target: {fileID: 8925753768622010228, guid: 8bf7faa0e74ec7049873d3d4cbd6f203, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -49.293
-      objectReference: {fileID: 0}
-    - target: {fileID: 8925753768622010228, guid: 8bf7faa0e74ec7049873d3d4cbd6f203, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -16.858747
-      objectReference: {fileID: 0}
-    - target: {fileID: 8925753768622010228, guid: 8bf7faa0e74ec7049873d3d4cbd6f203, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.9999667
-      objectReference: {fileID: 0}
-    - target: {fileID: 8925753768622010228, guid: 8bf7faa0e74ec7049873d3d4cbd6f203, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8925753768622010228, guid: 8bf7faa0e74ec7049873d3d4cbd6f203, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.008170381
-      objectReference: {fileID: 0}
-    - target: {fileID: 8925753768622010228, guid: 8bf7faa0e74ec7049873d3d4cbd6f203, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8925753768622010228, guid: 8bf7faa0e74ec7049873d3d4cbd6f203, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8925753768622010228, guid: 8bf7faa0e74ec7049873d3d4cbd6f203, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -0.936
-      objectReference: {fileID: 0}
-    - target: {fileID: 8925753768622010228, guid: 8bf7faa0e74ec7049873d3d4cbd6f203, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 8bf7faa0e74ec7049873d3d4cbd6f203, type: 3}
 --- !u!65 &6894933545583581820
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -85558,4 +85497,3 @@ SceneRoots:
   - {fileID: 1982963789}
   - {fileID: 2084022490}
   - {fileID: 5134454755305309495}
-  - {fileID: 6893776849221863990}

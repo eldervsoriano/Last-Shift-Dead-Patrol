@@ -378,7 +378,7 @@ public class UpgradeManager : MonoBehaviour
     private int bulletDuplicationLevel = 1;
 
     // Maximum levels
-    private const int maxMaxHealthLevel = 10; // Added maximum level for health
+    private const int maxMaxHealthLevel = 41; // Added maximum level for health
     private const int maxRegenRateLevel = 10;
     private const int maxMedKitLevel = 5;
     private const int maxBulletDuplicationLevel = 5;

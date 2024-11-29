@@ -455,6 +455,7 @@ Transform:
   m_Children:
   - {fileID: 5936487957658591530}
   - {fileID: 2611195627266903726}
+  - {fileID: 6437711019567314785}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -84.079, z: 0}
 --- !u!33 &5228810228529100557
@@ -573,9 +574,9 @@ MonoBehaviour:
   currentHealth: 0
   healthBarFill: {fileID: 4418954380764649563}
   healthText: {fileID: 6683019503476815631}
-  coinPrefab: {fileID: 4139901798266296659, guid: 6f8f16a74844a9d41ba5cc3a5cb2e32c, type: 3}
+  coinPrefab: {fileID: 919132149155446097, guid: 91782c42b1486a442ab3df5ba3ac28eb, type: 3}
   medKitPrefab: {fileID: 7903832516514181591, guid: 6350137a05342d74399b2ea5681f4b82, type: 3}
-  coinDropAmount: 100
+  coinDropAmount: 3
   scoreValue: 10
   medKitDropChance: 0.4
 --- !u!114 &1824527615229030775
@@ -617,3 +618,77 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!1001 &6835867668379078794
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1678294563556090206}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 9425246e16aca0045867e97fb6b9e94c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.2887086
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9425246e16aca0045867e97fb6b9e94c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.2887086
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9425246e16aca0045867e97fb6b9e94c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.2887086
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9425246e16aca0045867e97fb6b9e94c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.10462
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9425246e16aca0045867e97fb6b9e94c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.962
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9425246e16aca0045867e97fb6b9e94c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.126
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9425246e16aca0045867e97fb6b9e94c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.74268115
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9425246e16aca0045867e97fb6b9e94c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9425246e16aca0045867e97fb6b9e94c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.6696452
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9425246e16aca0045867e97fb6b9e94c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9425246e16aca0045867e97fb6b9e94c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9425246e16aca0045867e97fb6b9e94c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9425246e16aca0045867e97fb6b9e94c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9425246e16aca0045867e97fb6b9e94c, type: 3}
+      propertyPath: m_Name
+      value: BiggieZombieAnimation
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9425246e16aca0045867e97fb6b9e94c, type: 3}
+--- !u!4 &6437711019567314785 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9425246e16aca0045867e97fb6b9e94c, type: 3}
+  m_PrefabInstance: {fileID: 6835867668379078794}
+  m_PrefabAsset: {fileID: 0}

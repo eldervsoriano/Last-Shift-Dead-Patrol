@@ -272,16 +272,16 @@ public class EnemyHealth : MonoBehaviour
             playerScore.AddPoints(scoreValue); // Use the scoreValue for this enemy
         }
 
-        // Drop coins
-        //for (int i = 0; i < coinDropAmount; i++)
-        //{
-        //    Instantiate(coinPrefab, transform.position, Quaternion.identity);
-        //}
-
-        if (coinPrefab != null)
+        //Drop coins
+        for (int i = 0; i < coinDropAmount; i++)
         {
             Instantiate(coinPrefab, transform.position, Quaternion.identity);
         }
+
+        //if (coinPrefab != null)
+        //{
+        //    Instantiate(coinPrefab, transform.position, Quaternion.identity);
+        //}
 
         // Random chance to drop a med kit
         if (medKitPrefab != null && Random.value <= medKitDropChance)

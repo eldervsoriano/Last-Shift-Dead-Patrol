@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 3122242352210786237}
   serializedVersion: 2
   m_LocalRotation: {x: 0.000000021855694, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 21.169094, y: -47.924, z: -12.503293}
+  m_LocalPosition: {x: 21.169094, y: 0, z: -12.503293}
   m_LocalScale: {x: 45.552998, y: 45.552998, z: 45.552998}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 303ab05c3be75694ea4f5fe078ed07d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinValue: 1000
+  coinValue: 1
   collectSound: {fileID: 8300000, guid: c169466e144861f4da7f6afca3ae05b2, type: 3}
 --- !u!82 &6967324356565524459
 AudioSource:
@@ -112,7 +112,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: c169466e144861f4da7f6afca3ae05b2, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.34586853
   m_Pitch: 1
   Loop: 0
   Mute: 0
