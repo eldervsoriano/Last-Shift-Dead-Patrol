@@ -6961,7 +6961,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &882135941
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7485,7 +7485,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000038146973, y: 0}
+  m_AnchoredPosition: {x: -0.000038146973, y: -10.3}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &929953917
@@ -7510,8 +7510,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: NO
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 939f4e1de62198d49b10366abf62ddf3, type: 2}
-  m_sharedMaterial: {fileID: -3934539677198349315, guid: 939f4e1de62198d49b10366abf62ddf3, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0bf30f421c614274fa04138e52f800a4, type: 2}
+  m_sharedMaterial: {fileID: 2305697958160396630, guid: 0bf30f421c614274fa04138e52f800a4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -7541,7 +7541,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -7785,14 +7785,14 @@ RectTransform:
   m_GameObject: {fileID: 940430429}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.21870728, y: 0.26349956, z: 0.21870728}
+  m_LocalScale: {x: 1.9300807, y: 1.879268, z: 2.264151}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1567739842}
+  m_Father: {fileID: 1775183090}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.4, y: 22.5}
+  m_AnchoredPosition: {x: 0, y: 254}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &940430431
@@ -7817,12 +7817,12 @@ MonoBehaviour:
       m_Calls: []
   m_text: "In Last Shift: Dead Patrol, survival is key. Last as long as possible
     to surpass your high score. As waves of zombies invade the office, each defeated
-    foe drops coins, rewarding your precision and resilience. Each wave introduces
+    foe drops coins, rewarding your precision and resilience.\n\n\n Each wave introduces
     tougher zombie variants, testing your tactics and endurance. The longer you survive,
     the higher your score and the more resources you\u2019ll have to power your progression."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 14116cbd52c63204692b2b6c428b964c, type: 2}
-  m_sharedMaterial: {fileID: -8798188175154096774, guid: 14116cbd52c63204692b2b6c428b964c, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 9ba7c8583c623fc47bd0438154a78c6e, type: 2}
+  m_sharedMaterial: {fileID: -4837674895415970806, guid: 9ba7c8583c623fc47bd0438154a78c6e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -7846,13 +7846,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 23.43
-  m_fontSizeBase: 23.43
+  m_fontSize: 18.68
+  m_fontSizeBase: 18.68
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -8197,14 +8197,14 @@ RectTransform:
   m_GameObject: {fileID: 968617467}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.05307694, y: 0.48087394, z: 0.4338374}
+  m_LocalScale: {x: 0.6832466, y: 3.3300319, z: 3.6196017}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1567739842}
+  m_Father: {fileID: 1775183090}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 4.99, y: -7.1}
+  m_AnchoredPosition: {x: 736, y: -145.23}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &968617469
@@ -13069,11 +13069,9 @@ RectTransform:
   m_GameObject: {fileID: 1567739841}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 14.992556, y: 8.065312, z: 9.717127}
+  m_LocalScale: {x: 9.048007, y: 9.194456, z: 9.717127}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 940430430}
-  - {fileID: 968617468}
+  m_Children: []
   m_Father: {fileID: 1775183090}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -15412,6 +15410,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1567739842}
+  - {fileID: 940430430}
+  - {fileID: 968617468}
   m_Father: {fileID: 1406337559}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -38336,7 +38336,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!33 &2706945745367480662
 MeshFilter:
   m_ObjectHideFlags: 0
