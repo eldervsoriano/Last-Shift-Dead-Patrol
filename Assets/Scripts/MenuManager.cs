@@ -1243,24 +1243,28 @@ public class MenuManager : MonoBehaviour
     {
         Debug.Log("Opening About...");
         OpenPanel(aboutPanel);
+        PauseGame();
     }
 
     public void OpenShop()
     {
         Debug.Log("Opening Shop...");
         OpenPanel(shopPanel);
+        PauseGame();
     }
 
     public void BackToHomePanel()
     {
         Debug.Log("Opening Quit Confirmation...");
         OpenPanel(quitConfirmationPanel);
+        PauseGame();
     }
 
     public void OpenExitConfirmation()
     {
         Debug.Log("Opening Exit Confirmation...");
         OpenPanel(exitConfirmationPanel);
+        PauseGame();
     }
 
     // New method to open the Scoreboard Panel
@@ -1268,6 +1272,7 @@ public class MenuManager : MonoBehaviour
     {
         Debug.Log("Opening Scoreboard...");
         OpenPanel(scoreboardPanel);
+        PauseGame();
     }
 
     public void ConfirmQuit()
@@ -1284,6 +1289,7 @@ public class MenuManager : MonoBehaviour
     {
         Debug.Log("Canceling Quit...");
         CloseCurrentPanel();
+        PauseGame();
     }
 
     public void ConfirmExit()
@@ -1296,6 +1302,7 @@ public class MenuManager : MonoBehaviour
     {
         Debug.Log("Canceling Exit...");
         CloseCurrentPanel();
+        PauseGame();
     }
 
     /// <summary>
@@ -1323,10 +1330,10 @@ public class MenuManager : MonoBehaviour
             Debug.Log("Closed panel: " + currentPanel.name);
 
             // Resume the game if no panels are left open
-            if (panelStack.Count == 0)
-            {
-                ResumeGameLogic();
-            }
+            //if (panelStack.Count == 0)
+            //{
+            //    ResumeGameLogic();
+            //}
         }
         else
         {

@@ -185,7 +185,7 @@ public class PlayerScore : MonoBehaviour
         // Gameplay Score Display
         if (scoreText != null)
         {
-            scoreText.text = "Score: " + score.ToString(); // Display the current score during gameplay
+            scoreText.text = "SCORE: " + score.ToString(); // Display the current score during gameplay
         }
 
         // High Score Display
