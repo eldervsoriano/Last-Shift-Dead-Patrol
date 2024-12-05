@@ -442,8 +442,8 @@ public class UpgradeManager : MonoBehaviour
 
     private void UpdateCoinDisplay()
     {
-        if (gameCoinText) gameCoinText.text = coins.ToString();
-        if (shopCoinText) shopCoinText.text = coins.ToString();
+        if (gameCoinText) gameCoinText.text = "$: " + coins.ToString();
+        if (shopCoinText) shopCoinText.text = "$: " + coins.ToString();
     }
 
     public void UpgradeMaxHealth()

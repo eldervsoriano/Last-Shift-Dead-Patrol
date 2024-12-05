@@ -168,7 +168,7 @@ MonoBehaviour:
   coinPrefab: {fileID: 3122242352210786237, guid: 92c273427b0b5484492931ab3b41857a, type: 3}
   medKitPrefab: {fileID: 7903832516514181591, guid: 6350137a05342d74399b2ea5681f4b82, type: 3}
   coinDropAmount: 1
-  scoreValue: 10
+  scoreValue: 25
   medKitDropChance: 0.15
 --- !u!114 &5780732774694773951
 MonoBehaviour:
