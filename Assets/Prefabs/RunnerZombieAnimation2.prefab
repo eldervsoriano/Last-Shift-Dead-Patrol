@@ -1499,8 +1499,8 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 4.79
-  m_BaseOffset: -1.84
+  m_Height: 9.25
+  m_BaseOffset: 0.64
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!114 &7419070770272637636
@@ -1607,7 +1607,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 333e0ca66d68bd54a9f8a1514b2bf2b2, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.28518948
   m_Pitch: 1
   Loop: 0
   Mute: 0
